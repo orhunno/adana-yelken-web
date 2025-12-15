@@ -1,0 +1,101 @@
+/* Sunu 7: Harici CSS kullanımı */
+[cite_start]/* [cite: 114] */
+
+body {
+    background-color: #f0f8ff; /* Açık gökyüzü mavisi arka plan */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Ortalamak için sınıf */
+.merkez {
+    text-align: center;
+}
+
+/* HEADER: Üst Kısım */
+header {
+    background-color: #003366; /* Koyu Lacivert */
+    color: white;
+    padding: 30px;
+    border-bottom: 5px solid #ffd700; /* Altın sarısı çizgi */
+}
+
+h1 {
+    margin-top: 10px;
+    letter-spacing: 2px; /* Harflerin arasını açar */
+}
+
+/* NAV: Menü Çubuğu */
+nav {
+    background-color: #004080; /* Biraz daha açık lacivert */
+    padding: 15px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none; /* Madde işaretlerini kaldırır */
+}
+
+/* Sunu 7: Liste elemanlarını yan yana dizme (inline-block) */
+[cite_start]/* [cite: 366] */
+.menu-elemani {
+    display: inline-block;
+    margin: 0 15px; /* Aralarında boşluk bırak */
+}
+
+/* Link Tasarımı */
+nav a {
+    color: white;
+    text-decoration: none; /* Alt çizgiyi kaldır */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+/* Linkin üzerine gelince */
+nav a:hover {
+    background-color: white;
+    color: #003366;
+    border-radius: 5px;
+}
+
+/* MAIN: Ana İçerik */
+main {
+    width: 85%;
+    margin: 20px auto; /* Sayfayı ortalar */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Hafif gölge */
+}
+
+/* Kutular (Hizmetlerimiz kısmı) */
+.kutu {
+    display: inline-block; /* Kutuları yan yana dizer */
+    width: 25%;
+    background-color: #e6f2ff;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #b3d9ff;
+    border-radius: 10px; /* Kenarları yuvarlar */
+    vertical-align: top;
+}
+
+h3 {
+    color: #003366;
+    border-bottom: 2px solid #ddd;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* FOOTER: Alt Kısım */
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 14px;
+}
