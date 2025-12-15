@@ -1,101 +1,134 @@
-/* Sunu 7: Harici CSS kullanımı */
-[cite_start]/* [cite: 114] */
-
 body {
-    background-color: #f0f8ff; /* Açık gökyüzü mavisi arka plan */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
 }
 
-/* Ortalamak için sınıf */
-.merkez {
+header {
+    background-color: #003366;
+    padding: 15px 30px;
+    border-bottom: 4px solid #ffd700;
+    overflow: hidden;
+}
+
+.ust-sol {
+    float: left;
+}
+
+.ust-sol img {
+    height: 50px;
+    vertical-align: middle;
+}
+
+.ust-sol h1 {
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+nav {
+    float: right;
+    margin-top: 15px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+.rezervasyon {
+    border: 1px solid #ffd700;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: #ffd700;
+}
+
+.banner {
+    background-image: url('../img/manzara.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.banner-icerik {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    width: 60%;
+}
+
+.banner h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #d32f2f;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+main {
+    width: 80%;
+    margin: 30px auto;
     text-align: center;
 }
 
-/* HEADER: Üst Kısım */
-header {
-    background-color: #003366; /* Koyu Lacivert */
-    color: white;
-    padding: 30px;
-    border-bottom: 5px solid #ffd700; /* Altın sarısı çizgi */
+.tanitim {
+    margin-bottom: 40px;
 }
 
-h1 {
-    margin-top: 10px;
-    letter-spacing: 2px; /* Harflerin arasını açar */
-}
-
-/* NAV: Menü Çubuğu */
-nav {
-    background-color: #004080; /* Biraz daha açık lacivert */
-    padding: 15px;
-}
-
-ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none; /* Madde işaretlerini kaldırır */
-}
-
-/* Sunu 7: Liste elemanlarını yan yana dizme (inline-block) */
-[cite_start]/* [cite: 366] */
-.menu-elemani {
+.kutu {
     display: inline-block;
-    margin: 0 15px; /* Aralarında boşluk bırak */
-}
-
-/* Link Tasarımı */
-nav a {
-    color: white;
-    text-decoration: none; /* Alt çizgiyi kaldır */
-    font-size: 18px;
-    font-weight: bold;
-    padding: 5px 10px;
-}
-
-/* Linkin üzerine gelince */
-nav a:hover {
-    background-color: white;
-    color: #003366;
-    border-radius: 5px;
-}
-
-/* MAIN: Ana İçerik */
-main {
-    width: 85%;
-    margin: 20px auto; /* Sayfayı ortalar */
+    width: 30%;
     background-color: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Hafif gölge */
-}
-
-/* Kutular (Hizmetlerimiz kısmı) */
-.kutu {
-    display: inline-block; /* Kutuları yan yana dizer */
-    width: 25%;
-    background-color: #e6f2ff;
-    margin: 20px;
-    padding: 15px;
-    border: 1px solid #b3d9ff;
-    border-radius: 10px; /* Kenarları yuvarlar */
+    margin: 1%;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
     vertical-align: top;
 }
 
-h3 {
+.kutu h4 {
     color: #003366;
-    border-bottom: 2px solid #ddd;
-    display: inline-block;
-    padding-bottom: 5px;
 }
 
-/* FOOTER: Alt Kısım */
 footer {
     background-color: #003366;
     color: white;
+    text-align: center;
     padding: 20px;
-    margin-top: 30px;
-    font-size: 14px;
+    margin-top: 50px;
 }
