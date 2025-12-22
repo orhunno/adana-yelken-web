@@ -1,43 +1,66 @@
+/* GENEL AYARLAR */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
 }
 
+/* HEADER (ÜST MENÜ) */
 header {
-    background-color: #003366;
-    padding: 15px 30px;
-    border-bottom: 4px solid #ffd700;
-    overflow: hidden;
+    background-color: #002b5c;
+    padding: 0 5%;
+    border-bottom: 4px solid #c5a059;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    height: 90px;
 }
 
-.ust-sol {
-    float: left;
-}
-
-.ust-sol img {
-    height: 50px;
-    vertical-align: middle;
-}
-
-.ust-sol h1 {
-    display: inline-block;
+.logo-link {
+    text-decoration: none;
     color: white;
+    float: left;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo-kapsayici {
+    display: flex;
+    align-items: center;
+}
+
+.logo-kapsayici img {
+    height: 60px;
+    margin-right: 15px;
+}
+
+.logo-kapsayici h1 {
     font-size: 20px;
-    margin-left: 10px;
-    vertical-align: middle;
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: bold;
 }
 
 nav {
     float: right;
-    margin-top: 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 nav ul {
     margin: 0;
     padding: 0;
-    list-style-type: none;
+    list-style: none;
 }
 
 nav li {
@@ -46,89 +69,444 @@ nav li {
 }
 
 nav a {
-    color: white;
     text-decoration: none;
-    font-weight: bold;
+    color: white;
+    font-weight: 600;
     font-size: 14px;
+    transition: color 0.3s;
+    text-transform: uppercase;
 }
 
 nav a:hover {
-    color: #ffd700;
+    color: #c5a059;
 }
 
-.rezervasyon {
-    border: 1px solid #ffd700;
-    padding: 8px 15px;
+.btn-rezervasyon {
+    background-color: #c5a059;
+    color: #002b5c !important;
+    padding: 10px 20px;
     border-radius: 5px;
-    color: #ffd700;
+    font-weight: bold;
 }
 
-.banner {
-    background-image: url('../img/manzara.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    text-align: center;
+.btn-rezervasyon:hover {
+    background-color: white;
+    color: #002b5c !important;
+}
+
+.temizle {
+    clear: both;
+}
+
+/* ANA SAYFA HERO (VİDEO VE METİN) */
+.hero {
     position: relative;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.banner-icerik {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 40px;
+.arkaplan-video {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 10px;
-    width: 60%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
 }
 
-.banner h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
+.hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.9));
+    z-index: -1;
 }
 
-.btn {
-    background-color: #d32f2f;
+.hero-metin {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
     color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-main {
-    width: 80%;
-    margin: 30px auto;
+    width: 90%;
+    max-width: 1000px;
     text-align: center;
 }
 
-.tanitim {
-    margin-bottom: 40px;
+.hero-metin h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+.hero-metin p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
+
+.btn-hero {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #c5a059;
+    color: #002b5c;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.btn-hero:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
+
+/* GENEL İÇERİK YAPISI */
+main {
+    padding: 50px 10%;
+    min-height: 500px;
+}
+
+.hizmetler {
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 .kutu {
     display: inline-block;
     width: 30%;
+    padding: 30px;
     background-color: white;
-    padding: 20px;
-    margin: 1%;
-    box-sizing: border-box;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    margin: 1.5%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     vertical-align: top;
+    border-top: 4px solid #002b5c;
+    border-radius: 8px;
+    transition: transform 0.3s;
 }
 
-.kutu h4 {
-    color: #003366;
+.kutu:hover {
+    transform: translateY(-5px);
 }
 
+.kutu h3 {
+    color: #002b5c;
+    margin-bottom: 15px;
+}
+
+/* MENÜ NAVİGASYONU */
+.menu-navigasyon {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #002b5c;
+    font-weight: bold;
+    margin: 5px 10px;
+    padding: 10px 25px;
+    border: 2px solid #002b5c;
+    border-radius: 30px;
+    display: inline-block;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+.menu-link:hover {
+    background-color: #002b5c;
+    color: white;
+}
+
+/* YEMEK KARTLARI */
+.yemek-karti {
+    display: inline-block;
+    width: 30%;
+    margin: 1.5%;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: top;
+    transition: transform 0.3s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.yemek-karti:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.yemek-karti img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 3px solid #c5a059;
+    display: block;
+}
+
+/* İÇECEKLER SAYFASI İÇİN ÖZEL RESİM AYARI */
+.icecek-resmi {
+    object-fit: contain !important;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.yemek-karti h3 {
+    color: #002b5c;
+    margin: 15px 0 5px 0;
+}
+
+.yemek-karti p {
+    color: #666;
+    padding: 0 15px;
+    font-size: 14px;
+}
+
+.fiyat {
+    display: block;
+    color: #c5a059;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+/* ORGANİZASYON SAYFASI ÖZEL YAPISI */
+.organizasyon-hero {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 400px;
+    background-color: #002b5c;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.organizasyon-yazi-alani {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.organizasyon-resim-alani {
+    flex: 1;
+    min-width: 300px;
+}
+
+.organizasyon-resim-alani img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* REZERVASYON FORMU */
+.rezervasyon-bolumu {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-grup {
+    margin-bottom: 20px;
+}
+
+.form-grup-yan-yana {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.yarim {
+    width: 48%;
+    float: left;
+}
+
+.yarim:last-child {
+    float: right;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #002b5c;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fcfcfc;
+}
+
+input:focus, select:focus {
+    border-color: #c5a059;
+    outline: none;
+    box-shadow: 0 0 5px rgba(197, 160, 89, 0.5);
+}
+
+.btn-gonder {
+    width: 100%;
+    padding: 15px;
+    background-color: #002b5c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-gonder:hover {
+    background-color: #c5a059;
+    color: #002b5c;
+}
+
+/* FOOTER */
 footer {
-    background-color: #003366;
+    background-color: #002b5c;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 50px 0;
     margin-top: 50px;
+    border-top: 5px solid #c5a059;
+}
+
+.footer-icerik p {
+    margin: 8px 0;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.sosyal-medya {
+    margin-top: 25px;
+}
+
+.sosyal-medya a {
+    color: #c5a059;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid #c5a059;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.sosyal-medya a:hover {
+    background-color: #c5a059;
+    color: #002b5c;
+}
+
+/* BUTONLAR */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 999;
+}
+
+.whatsapp-btn img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.whatsapp-btn img:hover {
+    transform: scale(1.1);
+}
+
+#yukariBtn {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999;
+    border: none;
+    background-color: #002b5c;
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+#yukariBtn:hover {
+    background-color: #c5a059;
+    transform: translateY(-5px);
+}
+
+/* MOBİL UYUMLULUK */
+@media screen and (max-width: 900px) {
+    header {
+        height: auto;
+        padding: 10px;
+        position: relative;
+    }
+    .logo-link {
+        float: none;
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+    nav {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+    .kutu, .yemek-karti, .yarim {
+        width: 100%;
+        display: block;
+        margin: 20px 0;
+    }
+    .organizasyon-hero {
+        flex-direction: column;
+    }
+    .organizasyon-resim-alani {
+        height: 300px;
+    }
+    .hero-metin {
+        width: 95%;
+        bottom: 20px;
+    }
+    .hero-metin h2 {
+        font-size: 28px;
+    }
 }
